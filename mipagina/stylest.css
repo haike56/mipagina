@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+    
+}
+
+body {
+    
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.05cm;
+    line-height: 1.5;
+    background-color: rgb(248, 237, 80);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
+   
+    
+}
+ /*------------- encabezado--------------- */
+
+.header {
+    background-color: lightslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3cm;
+    padding: 20px;
+ }
+
+.header .log {
+    font-weight: bolder;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+   
+    
+}
+
+.header h1 {
+    transition: all 400ms ease;
+}
+
+.header h1:hover {
+    transform: scale(1.2);
+}
+
+.navbar .menu {
+    justify-content: space-between;
+    display: flex;
+    gap: 2cm;
+    cursor: pointer;
+    
+}
+
+.navbar .menu li a {
+    color: white;
+    font-weight: bolder;
+
+}
+
+
+.navbar .checkbtn {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+.checkbtn {
+    color: white;
+    font-size: 25px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.header .menu li a {
+    color: white;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0 3px;
+    justify-content: center;
+    
+    transition: all 400ms ease;
+
+
+    
+}
+
+
+    
+
+.header .menu li a:hover {
+    color: rgb(240, 240, 29);
+    background-color: black;
+    border-radius: 15px;
+    
+}
+
+header .menu li a:active{
+    color: #d9dbd9;
+    background-color: rgb(199, 181, 16);
+    
+
+}
+
+
+/*------------Barra Responsive--------------*/
+
+@media (max-width: 768px) {
+
+    body {
+        background: rgb(150, 209, 196);
+    }
+
+    .header {
+        background-color: rgba(58, 65, 173, 0.582);
+        min-height: 70px;
+        
+        
+        
+    }
+
+    
+    .checkbtn {
+        display: block;
+        font-size: 35px;
+    }
+
+    .header .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(0, 76, 139);
+        top: 100px; 
+        text-align: center;       
+        right:100%;        
+        transition: all 0.5s;
+        overflow: hidden;
+
+    }
+
+    .navbar li {
+        display: block;
+    }
+
+
+    #check:checked ~ ul {
+        right: 0%;
+        display: block;
+    }
+
+    .header nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 50px;
+    }
+
+    .header nav ul li a {
+        font-size: 20px;
+    }
+
+    #check:checked ~ .checkbtn {
+        color: rgb(25, 11, 109);
+    }
+
+    .navbar ul.menu {
+        float: none;
+        display: block;
+
+    }
+
+    .navbar ul.menu li a:hover {
+        color: rgba(37, 241, 18, 0.74);
+        
+
+    }
+
+    .navbar.active ul.menu {
+        opacity: 1;
+    }
+
+    
+
+}
+
+@media (min-width: 769px) {
+    /* Aquí puedes escribir los estilos que se aplicarán en pantallas más
+    grandes */
+    body {
+    font-size: 18px;
+    }
+    .container {
+    width: 80%;
+    margin: 0 auto;
+    }
+}
+
+
+/* Cuerpo*/
+
+
+
+/* Resto de tus estilos CSS aquí */
+
+#seccionp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#seccionp img {
+    width: 100%;
+    max-width: 300px; /* Establecer un ancho máximo para las imágenes */
+    height: auto;
+    margin: 10px; /* Agregar un margen entre las imágenes */
+}
+
+/* Media queries para dispositivos móviles */
+
+@media (max-width: 768px) {
+    #seccionp {
+        padding: 10px; /* Reducir el relleno en dispositivos móviles */
+    }
+    #seccionp img {
+        max-width: 100%; /* Ajustar el ancho máximo de las imágenes */
+        margin: 5px; /* Reducir el margen entre las imágenes */
+    }
+    /* Otros ajustes específicos para dispositivos móviles */
+}
+
+#seccionp img {
+    
+    padding: 30px;
+
+}
+
+
+#seccions img{
+    
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#seccionp .acerca {
+    font-size: 40px;
+    color: rgba(45, 98, 167, 0.925);
+}
+
+#seccionp .parrafo1 {
+    font-size: 20px;
+    color: rgb(56, 80, 126);
+}
+
+
+/*--------------Tarjetas-------------*/
+
+
+.subtitulo h1 {
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 20px;
+    color: rgb(59, 90, 148);
+}
+
+
+
+.subtitulo h1:hover{
+    transform: scale(1.2);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Alinea las tarjetas al centro */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan si no caben en una sola línea */
+    gap: 20px; /* Espacio entre las tarjetas */
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px
+    
+    
+; 
+}
+
+
+
+.card{
+    display: block;
+    flex-wrap: wrap;
+    position: relative;
+    width: 300px;
+    height: 350px;
+    
+
+}
+
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg) ;
+    box-shadow: 0 5px 10px #000;
+
+
+}
+
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 100px;
+    line-height: 50px;
+
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+
+}
+
+.card .back p {
+    letter-spacing: 1px;
+
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+
+
+
+
+
+
+/*-----------pie de pagina-----------*/
+
+footer {
+    background-color: rgb(226, 144, 50);
+    align-items: center;
+    margin-top: 50px;
+    
+
+
+    
+
+    
+}
+
+.cierre h1 {
+    color: antiquewhite;
+    transition: all 400ms ease;
+}
+
+.cierre h1:hover {
+    color: black;
+
+}
+
+.menu345 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre los menús */
+}
+
+.menu3,
+.menu4 {
+    flex: 1; /* Hace que ocupen el mismo espacio */
+}
+
+.menu3,
+.menu4 li {
+    font-size: 14px; /* Ajusta el tamaño del texto para que quepa */
+}
+
+/* Estilos adicionales */
+.opciones {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola línea */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-content: center; /* Alinea los elementos al centro horizontalmente */
+}
+
+.menu2,
+.menu3,
+.menu4 {
+    flex: 1; /* Hace que ocupen el mismo espacio */
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0; /* Elimina el espacio interno */
+}
+
+.menu2 a,
+.menu4 a {
+    color: antiquewhite;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    transition: all 400ms ease; /* Transición suave en los cambios */
+}
+
+.menu2 a:hover,
+.menu4 a:hover {
+    color: #000; /* Cambia el color al pasar el ratón por encima */
+    transform: scale(1.1); /* Escala ligeramente el tamaño al pasar el ratón por encima */
+}
+
+.menu2 {
+
+}
+.menu2 a {
+    font-size: 40px;
+        
+    
+}
+
+
+footer div a i {
+    position: fixed;
+    bottom: 22px;
+    right: 39px;
+    font-size: 60px;
+    transition: all 0.3s;
+    color: rgb(1, 24, 15);
+
+}
+
+footer div a i:hover {
+    color: rgb(36, 173, 9);
+
+}
+
+/*------formulario--------------*/
+
+.formulario {
+    text-align: center;
+    padding: 20px;
+}
+
+.formulario h2 {
+    color: #fff;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
